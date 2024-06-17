@@ -1,0 +1,307 @@
+/* phone.css - Styles for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    /* Reset margins and paddings */
+    body, #home, #services, #about, #contact {
+        margin: 0;
+        padding: 0;
+    }
+    #home, #services, #about, #contact {
+        margin-bottom: 10px;
+    }
+    /* Body padding for overall content */
+    body {
+        padding: 0 10px;
+    }
+
+    /* Navbar adjustments */
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    #navbar::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 96%;
+        width: 47%;
+        z-index: -1;
+        opacity: 0.1;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        padding: 0;
+        list-style: none;
+        position: relative;
+        right: 126px;
+    }
+
+    #navbar ul li {
+        text-align: center;
+        padding: 0px 0;
+        width: 100%;
+    }
+
+    #navbar ul li a {
+        padding: 8px 12px;
+        font-size: 1.2rem;
+    }
+    .auth-links {
+        position: absolute;
+
+    }
+    .auth-links a {
+        color: black;
+        font-size: 1.5rem;
+        font-family: 'Bebas Neue', sans-serif;
+        padding: 1px 5px;
+        margin-left: 0px;
+        border-radius: 5px;
+        background-color: white;
+    }
+
+    /* Logo adjustments */
+    #logo img {
+        height: 50px;
+        margin: 10px 0;
+        display: block; /* Center the logo */
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        right: 130px;
+    }
+
+    /* Dropdown adjustments */
+    .dropdown, .dropdown-container, .dropdown-content {
+        width: 100%;
+        left: 0;
+    }
+
+    /* Home section adjustments */
+    #home {
+        padding-top: 60px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #home h1, #home p {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #333;
+        padding: 0.5rem;
+        border-radius: 5px;
+        text-align: center;
+    }
+    #location-services {
+        display: flex;
+        justify-content: center;
+        margin-top: 0px;
+        /* Space from the top element */
+        background-color: #FFF;
+        /* Change as needed */
+        border: 3px solid black;
+        border-radius: 25px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        /* Optional */
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        width: 405px;
+        height: 51px;
+    }
+    
+    #location-input{
+        display: flex;
+        height: 43px;
+        border-radius: 32px;
+        padding: 0;
+        border: 0px solid #ccc;
+        font-size: 1.2rem;
+        color: grey;
+        background-color: white;
+        flex-grow: 1;
+        margin-right: 10px;
+     
+    }
+    #btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: none;
+    }
+    #locate-me{
+        width: 15px;
+        height: 48px;
+    
+    }
+    #location-input{
+        width: 161px;
+        position: relative;
+        left: 10px;
+    }
+    
+    #btn {
+        display: flex;
+        height: 41px;
+        /* Adjust height as needed */
+        border-radius: 32px;
+        /* Rounded corners */
+        padding: 0;
+        /* Horizontal padding */
+        border: 0px solid #ccc;
+        /* Border color */
+        font-size: 1.2rem;
+        /* Font size */
+        color: grey;
+        /* Font color */
+        background-color: white;
+        /* Background color */
+        flex-grow: 1;
+        margin-right: 10px;
+        flex: 0 0 auto;
+        /* Spacing between input and button */
+    }
+    
+    #btn {
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        margin: 0px;
+    }
+    
+    #btn {
+        padding: 21px 8px;
+        border: 1px solid white;
+        font-size: 1.2rem;
+        border-radius: 81px;
+        cursor: pointer;
+    }
+    
+    /* To ensure buttons and input are the same height and align properly */
+    
+    .centre {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Services container adjustments */
+    #services-conainer, #services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #services .box {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    /* Info section adjustments */
+    #About-section{
+        flex-direction: column;
+        align-items: center;
+        margin: 995px 0;
+        display: flex;
+    }
+    #About-section::before{
+        content: "";
+        position: absolute;
+        background: pink;
+        width: 104%;
+        height: 550px;
+        margin: 120px 0px;
+        z-index: -1;
+        opacity: 0.4;
+    }
+    #About {
+        flex-direction: column;
+    }
+    .About-items p::before {
+        content: "\2022"; /* Unicode for bullet point */
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: black; /* Adjust bullet color */
+    }
+    .About-items p {
+        text-align: left;
+        padding-left: 20px; /* Add left padding for indentation */
+        position: relative; /* Ensure correct bullet position */
+    }
+
+    #About img {
+        display: none;
+
+    }
+
+    .About-items {
+        width: 100%;
+    }
+
+    /* Contact section adjustments */
+    #contact {
+        position: absolute;
+        margin: 10px;
+        bottom: -143px;
+        
+    }
+    #contact::before {
+        content: "";
+        position: absolute;
+        margin: 193px 0px;
+        width: 471px;
+        height: 825px;
+        z-index: -1;
+        opacity: 2.7;
+        background: brown;
+        background-size: cover;
+        background-position: top;
+        background-position: 0 -190px;
+        left: -40px;
+    }
+    #contact .h-primary {
+        margin: 93px 50px;
+    }
+    #contact-box {
+        flex-direction: column;
+        align-items: center;
+        margin: 14px 0;
+    }
+
+    #contact-box form {
+        width: 90%;
+    }
+
+    #contact-box input, #contact-box textarea {
+        width: calc(100% - 30px);
+        margin: 5px 0;
+    }
+
+    #contact-box label {
+        color: #000;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 5px;
+        display: block;
+        margin-top: 1rem;
+    }
+
+    /* Contact form image adjustments */
+    #contact img {
+        width: 90%;
+        height: auto;
+        margin: 0 auto; /* Centers the image */
+    }
+
+    /* Footer adjustments */
+    footer {
+        margin-top: 10px;
+        position: relative;
+        top: 129px;
+        padding: 0px 0;
+
+    }
+}
+
+/* Additional styles for screens smaller than 480px if needed */
+@media screen and (max-width: 480px) {
+    /* Any specific styles for smaller screens can go here */
+}

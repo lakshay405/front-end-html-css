@@ -1,0 +1,529 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+CSS Variables:root {
+    --navbar-height: 59px;
+}
+html, body {
+    position: sticky;
+    max-width: 100vw;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+@media (max-width: 768px){
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/*navigation bar*/
+#navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 2px;
+    z-index: 10;
+    background-color: none; /* Using RGBA for dimgray with opacity */
+    padding: 0 0rem;
+}
+
+
+#navbar::before {
+    content: "";
+    background-color: dimgrey;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.2;
+
+}
+
+#navbar ul li:nth-last-child(-n+2) {
+    margin-left: auto;
+}
+
+/*navigation bar: logo and image*/
+#logo {
+    margin: 0px 33px;
+}
+
+#logo img {
+    height: 85px;
+    margin: 3px -33px;
+}
+
+/*navigation bar: list styling*/
+#navbar {
+    position: relative;
+}
+
+#navbar ul {
+    display: flex;
+    font-family: 'Bebas Neue', sans-serif;
+    gap: 1rem;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+#navbar ul li a {
+    color: black;
+    display: block;
+    padding: 1px 27px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: 5px white solid;
+}
+
+#navbar ul li a:hover {
+    color: white;
+    background-color: black;
+}
+
+.auth-links {
+    position: absolute;
+    right: 4px;
+    top: 2px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.auth-links a {
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 11px 24px;
+    margin-left: 0px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.auth-links a:hover {
+    color: white;
+    background-color: black;
+}
+
+/* Base styles for the dropdown button and menu */
+.dropdown {
+    position: absolute; /* Keeps the dropdown in a fixed position */
+    display: inline-block;
+    top: -17px; /* Adjust as needed for your layout */
+    left: -1560px; /* Adjust as needed for your layout */
+    font-size: 2.8rem;
+    font-family: 'Bree Serif', serif;
+}
+.dropdown-container {
+    position: absolute; /* Or absolute, depending on your needs */
+    top: -17px; /* Adjust this value to position the container */
+    left: -1560px; /* Adjust this value to position the container */
+    /* Additional styling */
+}
+
+/* Style for the dropdown button */
+.dropbtn {
+    background-color: #4CAF50; /* Button color */
+    color: black;
+    font-family: 'Bree Serif', serif;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style for the dropdown menu, hidden by default */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position relative to the dropdown */
+    right: 0; /* Aligns dropdown to the right */
+    min-width: 170px; /* Minimum width */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    z-index: 1; /* Ensures it's above other elements */
+}
+
+/* Style for individual menu items */
+.dropdown-content a {
+    background-color: white; /* Background color */
+    color: black; /* Text color */
+    padding: 12px 16px; /* Padding for spacing */
+    text-decoration: none; /* Removes underline from links */
+    display: block; /* Makes each link fill its container */
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Style for the dropdown button when hovered */
+.dropdown:hover .dropdown-content {
+    display: block; /* Shows the menu */
+}
+
+/* Style for menu items when hovered */
+.dropdown-content a:hover {
+    background-color: #ddd; /* Light grey background on hover */
+}
+
+/* Ensure dropdown-menu items are vertically aligned */
+.dropdown-menu li {
+    display: block;
+}
+
+/* home section*/
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--navbar-height) 1rem; /* Add padding to top and sides */
+    background: url('../css/img/bg1.jpg') no-repeat center center/cover; /* Directly apply background to home */
+    height: auto; /* Make height automatic to contain the content */
+    min-height: 50vh;
+    
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('../css/img/bg1.jpg') no-repeat center center/cover;
+    height: 492px;
+    top: 0px;
+    left: 0px;
+    width: 104%;
+    z-index: -1;
+    opacity: 0.99;
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+    font-family: 'bree Serif', serif;
+    z-index: 1;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'bree Serif', serif;
+    text-decoration: none;
+    top: 0px;
+    z-index: 1;
+}
+
+#location-services {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    /* Space from the top element */
+    background-color: #FFF;
+    /* Change as needed */
+    border: 3px solid black;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Optional */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+#location-input,
+#locate-me,
+#btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: none;
+}
+
+#location-input,
+#locate-me,
+#btn {
+    display: flex;
+    height: 50px;
+    /* Adjust height as needed */
+    border-radius: 32px;
+    /* Rounded corners */
+    padding: 0 20px;
+    /* Horizontal padding */
+    border: 0px solid #ccc;
+    /* Border color */
+    font-size: 1.2rem;
+    /* Font size */
+    color: grey;
+    /* Font color */
+    background-color: white;
+    /* Background color */
+    flex-grow: 1;
+    margin-right: 10px;
+    /* Spacing between input and button */
+}
+
+#btn {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    margin: 0px;
+}
+
+#btn {
+    padding: 25px 27px;
+    border: 1px solid white;
+    font-size: 1.6rem;
+    border-radius: 81px;
+    cursor: pointer;
+}
+
+/* To ensure buttons and input are the same height and align properly */
+
+.centre {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*services class*/
+#services-conainer {
+    display: flex;
+    position: relative;
+}
+#services {
+    margin: 36px;
+    display: flex;
+    width: 97%;
+    height: 398px;
+    top: 20px;
+}
+
+#services .box {
+    border: 5px solid black;
+    padding: 9px;
+    margin: -5px 16px;
+    border-radius: 28px;
+    background: #f6e6e6;
+}
+
+#services .box img {
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+
+#services .box p {
+    font-family: 'bree Serif', serif;
+    color: black;
+}
+
+
+/*info-section*/
+
+#About-section{
+    height: 475px;
+    margin: -30px 0px;
+}
+
+#About-section.h-primary{
+    margin: 0px;
+
+}
+
+#About{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0;
+    
+}
+
+#About-section::before{
+    content: "";
+    position: absolute;
+    background: url(../css/img/p1.jpg);
+    width: 104%;
+    height: 473px;
+    margin: 120px 0px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#About img{
+    height: 261px;
+    margin: 12px -11px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+    filter: brightness(58%) contrast(200%);
+    position: relative;
+}
+
+.About-items{
+    padding: 6px;
+    width: 25%; /* Divide by 4 if there are four items in a row */
+    height: auto; /* Height can be automatic to maintain aspect ratio */
+    display: inline-block; /* Or flex-item if using flexbox */
+    margin: 0.5%; /* Optional margin for spacing */
+    background-size: cover; /* Cover ensures the background image covers the area */
+    background-position: center; /* Centers the background image within the element */
+    border: 1px solid #ccc; /* Optional border */
+    box-sizing: border-box; /* Include padding and borders in the element's size */
+    overflow: hidden; 
+}
+@media screen and (max-width: 768px){
+    .About-items {
+        width: 50%; /* Each item takes half the width on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px){
+    .About-items {
+        width: 100%; /* Each item takes full width on very small screens */
+    }
+}
+
+.About-items p{
+    font-family: 'bree Serif', serif;
+    font-size: 2.0rem;
+    padding: 12px;
+    text-align: center;
+    color: black;
+    position: relative;
+}
+
+/* utility classes*/
+.h-primary {
+    font-family: 'bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 0px;
+    text-align: center;
+    color: black;
+}
+
+.h-secondary {
+    font-family: 'bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+    text-align: center;
+    color: black;
+}
+
+/*contact-section*/
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    margin: 110px 0px;
+    width: 100%;
+    height: 646px;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../css/img/bg3.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-position: top;
+    background-position: 0 -190px;
+}
+
+#contact .h-primary {
+    margin: 150px 10px;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 108px;
+    margin: -42px 0px;
+}
+
+#contact-box input {
+    width: 99%;
+    height: 30px;
+    border-radius: 9px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: black;
+    font-size: 1.5rem;
+
+}
+
+#contact-box textarea {
+    width: 98%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+
+}
+
+#contact-box form {
+    width: 55%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'bree Serif', serif;
+    text-decoration: none;
+    color: white;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    /* Maximum width */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+}
